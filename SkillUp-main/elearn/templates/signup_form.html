@@ -1,0 +1,144 @@
+{% load widget_tweaks %}
+{% load crispy_forms_filters %}
+{% load static %}
+
+
+{% load crispy_forms_tags %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}"/>
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+<link rel="icon" href="../../static/assets/img/icons/title_icon.png" type="image"/>
+<title>Register</title>
+
+<body class="bg-white">
+<!-- NAVBAR
+    ================================================== -->
+<header class="navbar navbar-expand-xl navbar-light bg-white border-bottom py-4 py-xl-4">
+    <div class="container">
+
+        <!-- Brand -->
+        <a class="navbar-brand me-0" href="index.html">
+            <svg width="150" height="73" viewBox="0 0 370.22222222222223 127.92062836869881"
+                 class="css-1j8o68f">
+                <defs id="SvgjsDefs1229"></defs>
+                <g id="SvgjsG1230" featurekey="monogramFeature-0"
+                   transform="matrix(2.6782980484064285,0,0,2.6782980484064285,-4.338842531911527,-47.54727770945593)"
+                   fill="#ffc78b">
+                    <path d="M1.62 59.1 l0 -8.46 c0.72 0.18 1.62 0.36 2.64 0.48 c1.02 0.18 2.1 0.3 3.24 0.36 s2.28 0.12 3.48 0.18 s2.34 0.12 3.36 0.12 c2.82 0 4.8 -0.18 6 -0.48 c1.14 -0.3 1.74 -0.84 1.74 -1.68 c0 -0.72 -0.54 -1.26 -1.08 -1.68 c-1.98 -1.32 -4.32 -1.86 -6.66 -2.4 c-6.6 -1.32 -12.66 -3.96 -12.66 -11.52 c0 -8.94 8.46 -11.04 15.72 -11.04 c4.02 0 8.1 0.42 12 1.38 l0 8.46 c-0.6 -0.18 -1.38 -0.3 -2.34 -0.48 c-1.02 -0.12 -2.04 -0.24 -3.18 -0.36 c-2.34 -0.24 -4.56 -0.36 -6.9 -0.36 c-1.32 0 -4.08 0 -5.34 0.48 c-0.84 0.3 -1.38 0.66 -1.38 1.62 c0 0.48 0.12 0.9 0.36 1.26 c0.24 0.42 0.66 0.72 1.2 1.02 c1.62 0.9 3.72 1.44 5.52 1.86 c1.5 0.36 3 0.78 4.56 1.2 c5.28 1.44 8.76 4.38 8.76 10.02 c0 9.3 -9.24 11.28 -16.68 11.28 c-4.08 0 -8.34 -0.3 -12.36 -1.26 z"></path>
+                </g>
+                <g id="SvgjsG1231" featurekey="nameFeature-0"
+                   transform="matrix(3.7229518654362437,0,0,3.7229518654362437,92.04327914559215,-46.9091949246901)"
+                   fill="#090761">
+                    <path d="M3.56 29.759999999999998 l9 -9.76 l2.4 0 l-9.32 10.04 l11.08 9.96 l-2.76 0 l-10.4 -9.36 l0 9.36 l-1.96 0 l0 -27.4 l1.96 0 l0 17.16 z M21.08 14.719999999999999 l-1.96 0 l0 -2.12 l1.96 0 l0 2.12 z M21.08 40 l-1.96 0 l0 -20 l1.96 0 l0 20 z M26.24 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M31.4 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M51 40 l-1.96 0 l0 -3.04 c-0.92 1.56 -3.04 3.36 -6.68 3.36 c-4.68 0 -7.76 -3.16 -7.76 -8.08 l0 -12.24 l1.96 0 l0 12 c0 4.04 2.24 6.44 6 6.44 c3.92 0 6.48 -2.64 6.48 -7 l0 -11.44 l1.96 0 l0 20 z M64.4 21.56 c-4.72 0 -8.36 3.64 -8.36 8.44 c0 4.76 3.64 8.4 8.36 8.4 c4.8 0 8.36 -3.68 8.36 -8.4 c0 -4.76 -3.56 -8.44 -8.36 -8.44 z M64.52 40.28 c-3.84 0 -6.72 -1.76 -8.36 -4.24 l0 10.92 l-1.96 0 l0 -26.96 l1.96 0 l0 3.92 c1.64 -2.48 4.52 -4.24 8.36 -4.24 c5.72 0 10.2 4.48 10.2 10.28 c0 5.84 -4.48 10.32 -10.2 10.32 z"></path>
+                </g>
+            </svg>
+        </a>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse z-index-lg" id="navbarCollapse">
+
+            <!-- Toggler -->
+            <button class="navbar-toggler outline-0 text-primary" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <!-- Icon -->
+                <svg width="16" height="17" viewBox="0 0 16 17" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0.142135 2.00015L1.55635 0.585938L15.6985 14.7281L14.2843 16.1423L0.142135 2.00015Z"
+                          fill="currentColor"></path>
+                    <path d="M14.1421 1.0001L15.5563 2.41431L1.41421 16.5564L0 15.1422L14.1421 1.0001Z"
+                          fill="currentColor"></path>
+                </svg>
+
+            </button>
+
+            <!-- Navigation -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'about' %}">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'services' %}">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'lsign' %}">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'login_form' %}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+
+<!-- PAGE TITLE
+================================================== -->
+<header class="py-8 py-md-11" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-4 fw-semi-bold mb-0">Register</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    Register
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+
+
+<!-- REGISTER
+================================================== -->
+<div class="container mb-11">
+    <div class="row gx-0">
+        <div class="col-md-7 col-xl-4 mx-auto">
+            <!-- Login -->
+            <h3 class="mb-6">Sign Up and Start Learning!</h3>
+
+            <!-- Form Login -->
+            <form method="post" novalidate>
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ next }}">
+                {{ form|crispy }}
+                <button class="btn btn-block btn-primary" type="submit">
+                    REGISTER
+                </button>
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 font-size-sm text-center">
+                Already have an account? <a class="text-underline" href="{% url 'login_form' %}">LogIn</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER
+================================================== -->
+{% include 'footer.html' %}
+
+</body>

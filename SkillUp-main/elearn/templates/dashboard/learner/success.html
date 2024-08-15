@@ -1,0 +1,51 @@
+{% extends 'dashboard/learner/base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <div class="container py-8 py-lg-11 woocommerce-order-received">
+        <div class="row">
+            <div class="col-xl-8 mx-xl-auto">
+                <header class="entry-header">
+                    <h1 class="entry-title">Order received</h1>
+                </header>
+
+                <div class="entry-content">
+                    <div class="woocommerce">
+                        <div class="woocommerce-order">
+                            <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
+                                Thank you. Your order has been received.</p>
+
+                            <ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
+                                <li class="woocommerce-order-overview__order order">
+                                    Order number:
+                                    <strong>21706</strong>
+                                </li>
+
+                                <li class="woocommerce-order-overview__date date">
+                                    Date:
+                                    <strong>November 16, 2020</strong>
+                                </li>
+
+                                <li class="woocommerce-order-overview__total total">
+                                    Total:
+                                    <strong><span class="woocommerce-Price-amount amount"><span
+                                            class="woocommerce-Price-currencySymbol">£</span>109.95</span></strong>
+                                </li>
+
+                                <li class="woocommerce-order-overview__payment-method method">
+                                    Payment method:
+                                    <strong>Check payments</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center"><a href="{% url 'learner' %}">Go back to dashboard</a></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

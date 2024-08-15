@@ -1,0 +1,28 @@
+{% extends 'dashboard/learner/base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+    <div class="container py-8 py-lg-11 woocommerce-order-received">
+        <div class="row">
+            <div class="col-xl-8 mx-xl-auto">
+                <header class="entry-header-cancelled">
+                    <h1 class="entry-title">Order Cancelled</h1>
+                </header>
+
+                <div class="entry-content">
+                    <div class="woocommerce">
+                        <div class="woocommerce-order">
+                            <p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received">
+                                Your order has been cancelled.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center"><a href="{% url 'learner' %}">Go back to dashboard</a></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

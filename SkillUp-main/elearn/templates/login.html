@@ -1,0 +1,125 @@
+{% load static %}
+{#<link href="{% static 'css/kye.css' %}" rel="stylesheet">#}
+{#<style type="text/css">#}
+{#	#bg{#}
+{#		background-repeat: no-repeat;#}
+{#		background-position: center;#}
+{#		background-size: 100%;#}
+{#	}#}
+{#</style>#}
+{#<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">#}
+{#<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">#}
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}"/>
+
+<!-- Theme CSS -->
+<link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+<link rel="icon" href="../../static/assets/img/icons/title_icon.png" type="image"/>
+
+<title>Login</title>
+
+<body class="bg-white">
+<!-- NAVBAR
+    ================================================== -->
+{% include 'nav.html' %}
+
+
+<!-- PAGE TITLE
+================================================== -->
+<header class="py-8 py-md-11" style="background-image: none;">
+    <div class="container text-center py-xl-2">
+        <h1 class="display-4 fw-semi-bold mb-0">Login</h1>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb breadcrumb-scroll justify-content-center">
+                <li class="breadcrumb-item">
+                    <a class="text-gray-800" href="{% url 'home' %}">
+                        Home
+                    </a>
+                </li>
+                <li class="breadcrumb-item text-gray-800 active" aria-current="page">
+                    Login
+                </li>
+            </ol>
+        </nav>
+    </div>
+    <!-- Img -->
+    <img class="d-none img-fluid" src="...html" alt="...">
+</header>
+
+
+<!-- LOGIN
+================================================== -->
+<div class="container mb-11">
+    <div class="row gx-0">
+        <div class="col-md-7 col-xl-4 mx-auto">
+            <!-- Login -->
+            <h3 class="mb-6">Log in to your <span style="color: #ffc78b">S</span>killUp account!</h3>
+
+            <!-- Form Login -->
+            <form class="mb-5" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <!-- Email -->
+                <div class="form-group mb-5">
+                    <label for="username">
+                        Username
+                    </label>
+                    <input type="text" class="form-control" id="username" name="username" required="Fill Username"
+                           placeholder="Enter Username">
+                </div>
+
+                <!-- Password -->
+                <div class="form-group mb-5">
+                    <label for="password">
+                        Password
+                    </label>
+                    <input type="password" class="form-control" id="password" name="password" required="Fill Password"
+                           placeholder="Enter Password">
+                </div>
+
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }} alert-dismissible" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+
+                <div class="d-flex align-items-center mb-5 font-size-sm">
+                    <div class="form-check">
+                        <input class="form-check-input text-gray-800" type="checkbox" id="autoSizingCheck1">
+                        <label class="form-check-label text-gray-800" for="autoSizingCheck1">
+                            Remember me
+                        </label>
+                    </div>
+
+                    <div class="ms-auto">
+                        <a class="text-gray-800" href="{% url 'password-reset' %}">Forgot Password?</a>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button class="btn btn-block btn-primary" type="submit">
+                    LOGIN
+                </button>
+            </form>
+
+            <!-- Text -->
+            <p class="mb-0 font-size-sm text-center">
+                Don't have an account? <a class="text-underline" href="{% url 'lsign' %}">Sign up</a>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- FOOTER
+================================================== -->
+{% include 'footer.html' %}
+</body>

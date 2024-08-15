@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    {% block title %}{% endblock %}
+<link rel="icon" href="../../../../static/assets/img/icons/title_icon.png" type="image"/>
+    <title>Instructor Dashboard</title>
+
+    {% load static %}
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="{% static 'vendor/datatables/dataTables.bootstrap4.css' %}" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin.css' %}" rel="stylesheet">
+    {% block stylesheet %}{% endblock %}
+</head>
+
+<body id="page-top">
+
+<!-- headers-->
+<nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+
+    <svg width="90" height="40" viewBox="0 0 370.22222222222223 127.92062836869881"
+                     class="css-1j8o68f">
+                    <defs id="SvgjsDefs3108"></defs>
+                    <g id="SvgjsG3109" featurekey="monogramFeature-0"
+                       transform="matrix(2.6782980484064285,0,0,2.6782980484064285,-4.338842531911527,-47.54727770945593)"
+                       fill="#ffffff">
+                        <path d="M1.62 59.1 l0 -8.46 c0.72 0.18 1.62 0.36 2.64 0.48 c1.02 0.18 2.1 0.3 3.24 0.36 s2.28 0.12 3.48 0.18 s2.34 0.12 3.36 0.12 c2.82 0 4.8 -0.18 6 -0.48 c1.14 -0.3 1.74 -0.84 1.74 -1.68 c0 -0.72 -0.54 -1.26 -1.08 -1.68 c-1.98 -1.32 -4.32 -1.86 -6.66 -2.4 c-6.6 -1.32 -12.66 -3.96 -12.66 -11.52 c0 -8.94 8.46 -11.04 15.72 -11.04 c4.02 0 8.1 0.42 12 1.38 l0 8.46 c-0.6 -0.18 -1.38 -0.3 -2.34 -0.48 c-1.02 -0.12 -2.04 -0.24 -3.18 -0.36 c-2.34 -0.24 -4.56 -0.36 -6.9 -0.36 c-1.32 0 -4.08 0 -5.34 0.48 c-0.84 0.3 -1.38 0.66 -1.38 1.62 c0 0.48 0.12 0.9 0.36 1.26 c0.24 0.42 0.66 0.72 1.2 1.02 c1.62 0.9 3.72 1.44 5.52 1.86 c1.5 0.36 3 0.78 4.56 1.2 c5.28 1.44 8.76 4.38 8.76 10.02 c0 9.3 -9.24 11.28 -16.68 11.28 c-4.08 0 -8.34 -0.3 -12.36 -1.26 z"></path>
+                    </g>
+                    <g id="SvgjsG3110" featurekey="nameFeature-0"
+                       transform="matrix(3.7229518654362437,0,0,3.7229518654362437,92.04327914559215,-46.9091949246901)"
+                       fill="#ffffff">
+                        <path d="M3.56 29.759999999999998 l9 -9.76 l2.4 0 l-9.32 10.04 l11.08 9.96 l-2.76 0 l-10.4 -9.36 l0 9.36 l-1.96 0 l0 -27.4 l1.96 0 l0 17.16 z M21.08 14.719999999999999 l-1.96 0 l0 -2.12 l1.96 0 l0 2.12 z M21.08 40 l-1.96 0 l0 -20 l1.96 0 l0 20 z M26.24 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M31.4 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M51 40 l-1.96 0 l0 -3.04 c-0.92 1.56 -3.04 3.36 -6.68 3.36 c-4.68 0 -7.76 -3.16 -7.76 -8.08 l0 -12.24 l1.96 0 l0 12 c0 4.04 2.24 6.44 6 6.44 c3.92 0 6.48 -2.64 6.48 -7 l0 -11.44 l1.96 0 l0 20 z M64.4 21.56 c-4.72 0 -8.36 3.64 -8.36 8.44 c0 4.76 3.64 8.4 8.36 8.4 c4.8 0 8.36 -3.68 8.36 -8.4 c0 -4.76 -3.56 -8.44 -8.36 -8.44 z M64.52 40.28 c-3.84 0 -6.72 -1.76 -8.36 -4.24 l0 10.92 l-1.96 0 l0 -26.96 l1.96 0 l0 3.92 c1.64 -2.48 4.52 -4.24 8.36 -4.24 c5.72 0 10.2 4.48 10.2 10.28 c0 5.84 -4.48 10.32 -10.2 10.32 z"></path>
+                    </g>
+                </svg>
+    <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Navbar Search -->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-primary" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+    <!-- Navbar -->
+    <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item dropdown no-arrow">
+            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fas fa-user-circle fa-fw text-primary"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item">{{ user.username }}</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="" data-toggle="modal" data-target="#logoutModal">Logout</a>
+            </div>
+        </li>
+    </ul>
+
+</nav>
+
+<div id="wrapper" style="padding-top: 50px;">
+<!-- Sidebar -->
+<ul class="sidebar navbar-nav">
+
+    <li class="nav-item active">
+        <a class="nav-link" href="{% url 'instructor' %}">
+         <i class="fa fa-home" aria-hidden="true"></i>
+            <span>Instructor Dashboard</span>
+        </a>
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" href="">
+            <i class="fas fa-user-circle fa-fw text-primary"></i>
+            <span>Logged As {{ user.username }}</span>
+        </a>
+    </li>
+
+    <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+          <i class="fa fa-th-list" aria-hidden="true"></i>
+            <span style="color: white">Manage Quiz</span>
+        </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{% url 'quiz_add' %}">Add Quiz</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'quiz_change_list' %}">List Quiz</a>
+            </div>
+        </li>
+
+
+         <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+            <i class="fas fa-book-reader" aria-hidden="true"></i>
+             <span style="color: white">Manage Tutorials</span>
+        </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{% url 'tutorial' %}">Add Tutorial</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'itutorial' %}">List Tutorial</a>
+            </div>
+        </li>
+
+         <li class="nav-item">
+        <a class="nav-link" href="{% url 'lnotes' %}">
+            <i class="fas fa-pen" aria-hidden="true"></i>
+            <span style="color: white">Manage Notes</span>
+        </a>
+    </li>
+    <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+        <i class="fas fa-bell"></i>
+
+            <span style="color: white">Announcements</span>
+        </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{% url 'ipost' %}">Post Announcements</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'llchat' %}">List Announcements</a>
+            </div>
+        </li>
+     <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="">
+            <i class="fas fa-user text-default"></i>
+            <span style="color: white">Manage Profile</span>
+        </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="{% url 'user_profile' %}">View Profile</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="{% url 'create_profile' %}">Create Profile</a>
+            </div>
+        </li>
+
+</ul>    
+
+    {% block body %}{% endblock %}
+    <!-- /.content-wrapper -->
+</div>
+<!-- /#wrapper -->
+
+<!-- Scroll to Top Button-->
+<a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+</a>
+
+<!-- Logout Modal-->
+<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+               <a class="btn btn-primary" href="/logout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+ {% block content %}
+ {% endblock %}
+
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Page level plugin JavaScript-->
+<script src="{% static 'vendor/datatables/jquery.dataTables.js' %}"></script>
+<script src="{% static 'vendor/datatables/dataTables.bootstrap4.js' %}"></script>
+
+<!-- Demo scripts for this page-->
+<script src="{% static 'js/demo/datatables-demo.js' %}"></script>
+<!-- Custom scripts for all pages-->
+<script src="{% static 'js/sb-admin.min.js' %}"></script>
+<script>
+    $(".alert-success").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert-success").slideUp(500);
+    });
+    $(".alert-error").fadeTo(2000, 500).slideUp(500, function(){
+        $(".alert-error").slideUp(500);
+    });
+</script>
+
+{% block javascript %}{% endblock %}
+

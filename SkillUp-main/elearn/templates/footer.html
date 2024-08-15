@@ -1,0 +1,353 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/four/css/bootstrap.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/three/css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/jarallax/dist/jarallax.css' %}">
+<link rel="stylesheet" href="{% static 'assets/libs/@fancyapps/fancybox/dist/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/aos/dist/aos.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/choices.js/public/assets/styles/choices.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity-fade/flickity-fade.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/flickity/dist/flickity.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/highlightjs/styles/vs2015.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/libs/quill/dist/quill.core.css' %}" />
+
+<!-- Theme CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+
+<!-- FOOTER
+================================================== -->
+<footer class="pt-8 pt-md-11 bg-light">
+    <div class="container">
+        <div class="row" id="accordionFooter">
+            <div class="col-12 col-md-4 col-lg-4">
+
+                <!-- Brand -->
+                <svg width="150" height="73" viewBox="0 0 370.22222222222223 127.92062836869881"
+                 class="css-1j8o68f">
+                <defs id="SvgjsDefs1229"></defs>
+                <g id="SvgjsG1230" featurekey="monogramFeature-0"
+                   transform="matrix(2.6782980484064285,0,0,2.6782980484064285,-4.338842531911527,-47.54727770945593)"
+                   fill="#ffc78b">
+                    <path d="M1.62 59.1 l0 -8.46 c0.72 0.18 1.62 0.36 2.64 0.48 c1.02 0.18 2.1 0.3 3.24 0.36 s2.28 0.12 3.48 0.18 s2.34 0.12 3.36 0.12 c2.82 0 4.8 -0.18 6 -0.48 c1.14 -0.3 1.74 -0.84 1.74 -1.68 c0 -0.72 -0.54 -1.26 -1.08 -1.68 c-1.98 -1.32 -4.32 -1.86 -6.66 -2.4 c-6.6 -1.32 -12.66 -3.96 -12.66 -11.52 c0 -8.94 8.46 -11.04 15.72 -11.04 c4.02 0 8.1 0.42 12 1.38 l0 8.46 c-0.6 -0.18 -1.38 -0.3 -2.34 -0.48 c-1.02 -0.12 -2.04 -0.24 -3.18 -0.36 c-2.34 -0.24 -4.56 -0.36 -6.9 -0.36 c-1.32 0 -4.08 0 -5.34 0.48 c-0.84 0.3 -1.38 0.66 -1.38 1.62 c0 0.48 0.12 0.9 0.36 1.26 c0.24 0.42 0.66 0.72 1.2 1.02 c1.62 0.9 3.72 1.44 5.52 1.86 c1.5 0.36 3 0.78 4.56 1.2 c5.28 1.44 8.76 4.38 8.76 10.02 c0 9.3 -9.24 11.28 -16.68 11.28 c-4.08 0 -8.34 -0.3 -12.36 -1.26 z"></path>
+                </g>
+                <g id="SvgjsG1231" featurekey="nameFeature-0"
+                   transform="matrix(3.7229518654362437,0,0,3.7229518654362437,92.04327914559215,-46.9091949246901)"
+                   fill="#090761">
+                    <path d="M3.56 29.759999999999998 l9 -9.76 l2.4 0 l-9.32 10.04 l11.08 9.96 l-2.76 0 l-10.4 -9.36 l0 9.36 l-1.96 0 l0 -27.4 l1.96 0 l0 17.16 z M21.08 14.719999999999999 l-1.96 0 l0 -2.12 l1.96 0 l0 2.12 z M21.08 40 l-1.96 0 l0 -20 l1.96 0 l0 20 z M26.24 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M31.4 40 l-1.96 0 l0 -27.4 l1.96 0 l0 27.4 z M51 40 l-1.96 0 l0 -3.04 c-0.92 1.56 -3.04 3.36 -6.68 3.36 c-4.68 0 -7.76 -3.16 -7.76 -8.08 l0 -12.24 l1.96 0 l0 12 c0 4.04 2.24 6.44 6 6.44 c3.92 0 6.48 -2.64 6.48 -7 l0 -11.44 l1.96 0 l0 20 z M64.4 21.56 c-4.72 0 -8.36 3.64 -8.36 8.44 c0 4.76 3.64 8.4 8.36 8.4 c4.8 0 8.36 -3.68 8.36 -8.4 c0 -4.76 -3.56 -8.44 -8.36 -8.44 z M64.52 40.28 c-3.84 0 -6.72 -1.76 -8.36 -4.24 l0 10.92 l-1.96 0 l0 -26.96 l1.96 0 l0 3.92 c1.64 -2.48 4.52 -4.24 8.36 -4.24 c5.72 0 10.2 4.48 10.2 10.28 c0 5.84 -4.48 10.32 -10.2 10.32 z"></path>
+                </g>
+            </svg>
+
+                <!-- Text -->
+                <p class="text-gray-800 mb-4 font-size-sm-alone">
+                    8166 Rutherford dr. Woodridge IL 60517
+                </p>
+
+                <div class="mb-4">
+                    <a href="tel:1234567890" class="text-gray-800 font-size-sm-alone">123 456 7890</a>
+                </div>
+
+                <div class="mb-4">
+                    <a href="mailto:skillup334@gmail.com" class="text-gray-800 font-size-sm-alone">skillup334@gmail.com</a>
+                </div>
+
+                <!-- Social -->
+                <ul class="list-unstyled list-inline list-social mb-4 mb-md-0">
+                    <li class="list-inline-item list-social-item">
+                        <a href="#"
+                           class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#"
+                           class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#"
+                           class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="list-inline-item list-social-item">
+                        <a href="#"
+                           class="text-secondary font-size-sm w-36 h-36 shadow-dark-hover d-flex align-items-center justify-content-center rounded-circle border-hover">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2">
+                <div class="mb-5 mb-xl-0 footer-accordion">
+
+                    <!-- Heading -->
+                    <div id="widgetOne">
+                        <h5 class="mb-5">
+                            <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseOne"
+                                    aria-expanded="true" aria-controls="widgetcollapseOne">
+                                Our Company
+                                <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="widgetcollapseOne" class="collapse show" aria-labelledby="widgetOne"
+                         data-parent="#accordionFooter">
+                        <!-- List -->
+                        <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                            <li class="mb-3">
+                                <a href="{% url 'home' %}" class="text-reset">
+                                    Home
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{% url 'about' %}" class="text-reset">
+                                    About Us
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{% url 'contact' %}" class="text-reset">
+                                    Contact Us
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="{% url 'services' %}" class="text-reset">
+                                    Services
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2">
+                <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                    <!-- Heading -->
+                    <div id="widgetTwo">
+                        <h5 class="mb-5">
+                            <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseTwo"
+                                    aria-expanded="false" aria-controls="widgetcollapseTwo">
+                                Topics
+                                <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="widgetcollapseTwo" class="collapse" aria-labelledby="widgetTwo"
+                         data-parent="#accordionFooter">
+                        <!-- List -->
+                        <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-6 mb-md-8 mb-lg-0">
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    HTML
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    CSS
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Design
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    JavaScript
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Ruby
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    PHP
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Android
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Development Tools
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Business
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 offset-md-4 col-lg-2 offset-lg-0">
+                <div class="mb-5 mb-xl-0 ms-xl-6 footer-accordion">
+
+                    <!-- Heading -->
+                    <div id="widgetThree">
+                        <h5 class="mb-5">
+                            <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseThree"
+                                    aria-expanded="false" aria-controls="widgetcollapseThree">
+                                Tracks
+                                <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="widgetcollapseThree" class="collapse" aria-labelledby="widgetThree"
+                         data-parent="#accordionFooter">
+                        <!-- List -->
+                        <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-0">
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Web Design
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Web Development
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Rails Development
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    PHP Development
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Android Development
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Starting a Business
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-lg-2 d-xl-flex">
+                <div class="mb-5 mb-xl-0 ms-xl-auto footer-accordion">
+
+                    <!-- Heading -->
+                    <div id="widgetFour">
+                        <h5 class="mb-5">
+                            <button class="text-dark fw-medium footer-accordion-toggle d-flex align-items-center"
+                                    type="button" data-bs-toggle="collapse" data-bs-target="#widgetcollapseFour"
+                                    aria-expanded="false" aria-controls="widgetcollapseFour">
+                                Support
+                                <span class="ms-auto text-dark">
+                                        <!-- Icon -->
+                                        <svg width="15" height="2" viewBox="0 0 15 2" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <rect width="15" height="2" fill="currentColor"/>
+                                        </svg>
+
+                                        <svg width="15" height="16" viewBox="0 0 15 16" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0 7H15V9H0V7Z" fill="currentColor"/>
+                                            <path d="M6 16L6 8.74228e-08L8 0L8 16H6Z" fill="currentColor"/>
+                                        </svg>
+
+                                    </span>
+                            </button>
+                        </h5>
+                    </div>
+
+                    <div id="widgetcollapseFour" class="collapse" aria-labelledby="widgetFour"
+                         data-parent="#accordionFooter">
+                        <!-- List -->
+                        <ul class="list-unstyled text-gray-800 font-size-sm-alone mb-0">
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Documentation
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Forums
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Language Packs
+                                </a>
+                            </li>
+                            <li class="mb-3">
+                                <a href="#" class="text-reset">
+                                    Release Status
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 mt-md-5">
+                <div class="border-top pb-5 pt-6 py-md-4 text-center text-xl-start d-flex flex-column d-md-block d-xl-flex flex-xl-row align-items-center" style="justify-content: center">
+                    <p class="text-gray-800 font-size-sm-alone d-block mb-0 mb-md-2 mb-xl-0 order-1 order-md-0 px-9 px-md-0">
+                        Copyright ©2024. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</footer>
